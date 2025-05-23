@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DUK – Dažniausiai užduodami klausimai</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .faq-section {
+      max-width: 700px;
+      margin: 3em auto 2em auto;
+      padding: 2em 1em;
+      border-radius: 16px;
+      background: var(--section-bg, #23243a);
+    }
+    .faq-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 14px;
+      padding: 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      color: #23243a;
+    }
+    .faq-question {
+      display: block;
+      width: 100%;
+      padding: 14px 40px 14px 18px;
+      background: transparent;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 0;
+      position: relative;
+      color: #23243a;
+      font-size: 1.1em;
+      transition: background 0.2s, color 0.2s;
+      outline: none;
+      border: none;
+      text-align: left;
+    }
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2em;
+      color: #ffd600;
+      transition: transform 0.2s;
+    }
+    .faq-item.open .faq-question {
+      color: #ffd600;
+      background: #23243a;
+    }
+    .faq-item.open .faq-question::after {
+      content: '-';
+      transform: translateY(-50%) rotate(180deg);
+    }
+    .faq-answer {
+      display: none;
+      margin: 0;
+      padding: 0 18px 14px 18px;
+      color: #444;
+      animation: fadeIn 0.3s;
+      font-size: 1em;
+    }
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @media (max-width: 700px) {
+      .faq-section {
+        padding: 1em 0.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="faq-section section-bg">
+    <h1 style="color:#ffd600;text-align:center;margin-bottom:1.5em;">Dažniausiai užduodami klausimai (D.U.K.)</h1>
+
+    <div class="faq-item">
+      <p class="faq-question">Kokia yra jūsų paslaugų kaina?</p>
+      <div class="faq-answer">
+        <p>Mūsų paslaugų kainos priklauso nuo daugelio veiksnių – paslaugos rūšies, darbo sudėtingumo, datos ir kliento pageidavimų. Kad galėtume pateikti tikslią kainą, kviečiame susisiekti ir aptarti jūsų poreikius.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Kada gausime galutinį darbą?</p>
+      <div class="faq-answer">
+        <p>Galutinio darbo atidavimo laikas priklauso nuo konkretaus užsakymo apimties bei mūsų užimtumo. Vidutiniškai procesas užtrunka apie 2–3 savaites.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Kaip galima užsisakyti paslaugą ar rezervuoti datą?</p>
+      <div class="faq-answer">
+        <p>Norėdami rezervuoti datą ar užsisakyti paslaugą, susisiekite su mumis. Jei pasirinkta diena dar neužimta – ją iš karto rezervuosime jums.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Kiek specialistų dirba renginio metu?</p>
+      <div class="faq-answer">
+        <p>Paprastai dirba vienas, priklausomai nuo renginio dydžio ir sudėtingumo. Dideliems renginiams galime pasiūlyti komandą, kuri užtikrins sklandų darbą.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Ar montuojate vaizdo įrašus iš klientų pateiktos medžiagos?</p>
+      <div class="faq-answer">
+        <p>Taip, galime, prašome susisiekti, aptarsime detales ir galimybes.</p>   
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(function(question) {
+      question.addEventListener('click', function() {
+        // Uždaro visus
+        document.querySelectorAll('.faq-item').forEach(function(item) {
+          if (item !== question.parentElement) item.classList.remove('open');
+        });
+        // Atidaro/paslepia pasirinktą
+        question.parentElement.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
