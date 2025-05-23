@@ -516,7 +516,20 @@ footer {
     max-width: 98vw;
     min-width: 0;
     width: 100%;
-    padding: 1.2em 0.7em 1em 0.7em;
+    padding: 1em 0.5em 0.7em 0.5em; /* mažesni paddingai */
+    min-height: 160px; /* sumažinta aukštis */
+    border-radius: 16px;
+  }
+  .service-icon {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  .service-card h3 {
+    font-size: 1em;
+    margin-bottom: 0.4em;
+  }
+  .service-card p {
+    font-size: 0.98em;
   }
   .contact {
     padding: 1.5em 0.5em;
