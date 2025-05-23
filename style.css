@@ -513,23 +513,36 @@ footer {
     align-items: center;
   }
   .service-card {
-    max-width: 98vw;
+    max-width: 85vw;           /* sumažintas plotis */
     min-width: 0;
-    width: 100%;
-    padding: 1em 0.5em 0.7em 0.5em; /* mažesni paddingai */
-    min-height: 160px; /* sumažinta aukštis */
+    width: 85vw;               /* sumažintas plotis */
+    margin: 0 auto;
+    padding: 1em 0.7em 0.7em 0.7em;
+    min-height: 110px;         /* dar mažesnė aukštis */
     border-radius: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* centras viskam kortelėje */
+    text-align: center;        /* tekstas centre */
   }
   .service-icon {
     font-size: 2em;
     margin-bottom: 0.5em;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
   .service-card h3 {
     font-size: 1em;
     margin-bottom: 0.4em;
+    text-align: center;
+    width: 100%;
   }
   .service-card p {
     font-size: 0.98em;
+    text-align: center;
+    width: 100%;
   }
   .contact {
     padding: 1.5em 0.5em;
