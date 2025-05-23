@@ -92,6 +92,7 @@ body {
   overflow: hidden;
   min-height: 350px;
   background: #181b2c;
+  display: block;
 }
 
 .hero-video {
@@ -485,6 +486,11 @@ footer {
     align-items: center;
     padding: 1em;
   }
+  .logo {
+    display: block;
+    margin: 0 auto 1em auto;
+    float: none;
+  }
   .navbar ul {
     flex-wrap: wrap;
     justify-content: center;
@@ -545,6 +551,10 @@ footer {
     text-align: center;
     min-height: 120px;
     word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .hero h1 {
     font-size: 1.15em;
@@ -552,5 +562,11 @@ footer {
     text-align: center;
     margin: 0;
     word-break: break-word;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
