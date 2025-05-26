@@ -82,17 +82,21 @@ body {
 }
 
 /* Hero sekcija */
+/* Hero sekcija */
 .hero {
   position: relative;
   color: white;
-  padding: 6em 2em;
-  text-align: right;
+  padding: 0 2em;
+  text-align: center;
   font-size: 2em;
   font-weight: bold;
   overflow: hidden;
   min-height: 350px;
   background: #181b2c;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-video {
@@ -104,12 +108,33 @@ body {
   opacity: 1;
 }
 
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(24, 27, 44, 0.55); /* tamsus overlay, reguliuokite alpha */
+  z-index: 1;
+}
+
 .hero h1 {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  font-weight: 800;
+  font-size: 2.2em;
+  line-height: 1.1;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0 10px;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.5);
+  background: none;
+  border-radius: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Paslaugos */
