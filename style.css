@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0.1em 2em;
+  padding: 0.3em 2em;
   background: #000;
   color: white;
 }
@@ -82,63 +82,36 @@ body {
 }
 
 /* Hero sekcija */
-@media (max-width: 600px) {
-  .hero {
-    padding: 0;
-    min-height: 40vw;
-    height: 40vw;
-    max-height: 50vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* KELIA Į VIRŠŲ */
-    align-items: center;
-    position: relative;
-    text-align: center;
-    font-size: 1em;
-    background: #181b2c;
-    overflow: hidden;
-  }
-  .hero-video {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 40vw;
-    min-height: 120px;
-    max-height: 50vw;
-    object-fit: cover;
-    z-index: 0;
-    border-radius: 0;
-    opacity: 0.92;
-    transition: opacity 0.3s;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(0,0,0,0.18));
-    z-index: 1;
-    pointer-events: none;
-  }
-  .hero h1 {
-    position: relative;
-    z-index: 2;
-    font-size: 2em;
-    line-height: 1.1;
-    font-weight: 800;
-    color: #fff;
-    text-align: center;
-    margin: 2vw 0 0 0; /* šiek tiek tarpo nuo viršaus */
-    padding: 0 10px 1vw 10px;
-    text-shadow: 0 2px 16px rgba(0,0,0,0.5);
-    background: none;
-    border-radius: 0;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
+.hero {
+  position: relative;
+  color: white;
+  padding: 6em 2em;
+  text-align: right;
+  font-size: 2em;
+  font-weight: bold;
+  overflow: hidden;
+  min-height: 350px;
+  background: #181b2c;
+  display: block;
 }
+
+.hero-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 1;
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+}
+
 /* Paslaugos */
 .services {
   padding: 4em 1em 3em 1em;
@@ -540,18 +513,18 @@ footer {
     align-items: center;
   }
   .service-card {
-    max-width: 85vw;
+    max-width: 85vw;           /* sumažintas plotis */
     min-width: 0;
-    width: 85vw;
+    width: 85vw;               /* sumažintas plotis */
     margin: 0 auto;
     padding: 1em 0.7em 0.7em 0.7em;
-    min-height: 110px;
+    min-height: 110px;         /* dar mažesnė aukštis */
     border-radius: 16px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: center;       /* centras viskam kortelėje */
+    text-align: center;        /* tekstas centre */
   }
   .service-icon {
     font-size: 2em;
@@ -598,18 +571,40 @@ footer {
     padding: 0 12px 14px 12px;
     font-size: 0.98em;
   }
+  .hero {
+    padding: 2.2em 0.7em 1.5em 0.7em;
+    font-size: 1.05em;
+    text-align: center;
+    min-height: 120px;
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: 1.15em;
+    line-height: 1.25;
+    text-align: center;
+    margin: 0;
+    word-break: break-word;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
-
-/* ----------- Tik telefonui: HERO ----------- */
 @media (max-width: 600px) {
   .hero {
     padding: 0;
-    min-height: 60vw;
-    height: 60vw;
-    max-height: 70vw;
+    min-height: 320px;
+    height: 55vw;
+    max-height: 60vw;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     position: relative;
     text-align: center;
@@ -622,32 +617,22 @@ footer {
     top: 0; left: 0;
     width: 100vw;
     height: 60vw;
-    min-height: 180px;
-    max-height: 70vw;
+    min-height: 220px;
+    max-height: 65vw;
     object-fit: cover;
     z-index: 0;
     border-radius: 0;
-    opacity: 0.92;
-    transition: opacity 0.3s;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(0,0,0,0.18));
-    z-index: 1;
-    pointer-events: none;
   }
   .hero h1 {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     font-size: 2em;
     line-height: 1.1;
     font-weight: 800;
     color: #fff;
     text-align: center;
-    margin: 0 0 1vw 0;
-    padding: 0 10px 2vw 10px;
+    margin: 0;
+    padding: 0 10px;
     text-shadow: 0 2px 16px rgba(0,0,0,0.5);
     background: none;
     border-radius: 0;
@@ -655,6 +640,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
   }
 }
