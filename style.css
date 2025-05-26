@@ -594,9 +594,9 @@ footer {
     position: absolute;
     top: 0; left: 0;
     width: 100vw;
-    height: 60vw;
+    height: 100vw;
     min-height: 320px;
-    max-height: 60vw;
+    max-height: 120vw;
     object-fit: cover;
     z-index: 0;
     border-radius: 0;
