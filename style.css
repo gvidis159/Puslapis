@@ -16,7 +16,7 @@ body {
   flex-direction: row;
   align-items: center;
   padding: 0.3em 2em;
-  background: f0000;
+  background: f000000;
   color: white;
 }
 
@@ -599,9 +599,9 @@ footer {
 @media (max-width: 600px) {
   .hero {
     padding: 0;
-    min-height: 320px;
-    height: 55vw;
-    max-height: 60vw;
+    min-height: 100vh;
+    height: 100vh;
+    max-height: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
