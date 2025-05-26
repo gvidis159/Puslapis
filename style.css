@@ -642,4 +642,16 @@ footer {
     align-items: center;
     justify-content: center;
   }
+  /* Tik telefone: hero aukštis ir gradientas */
+  .hero {
+    height: 90vh;
+    min-height: 400px;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    z-index: 0;
+  }
 }
