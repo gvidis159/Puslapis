@@ -1,645 +1,144 @@
-/* Bendri stiliai */
-body {
-  margin: 0;
-  font-family: 'Inter', Helvetica, Arial, sans-serif;
-  background: #181b2c;
-  color: #fff;
-}
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videografo Paslaugos</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Montserrat šriftas -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <img src="logo.png" alt="Logo" class="logo">
+    <ul>
+      <li data-aos="fade-down"><a href="#darbai">Darbai</a></li>
+      <li data-aos="fade-down" data-aos-delay="100"><a href="#paslaugos">Paslaugos</a></li>
+      <li data-aos="fade-down" data-aos-delay="200"><a href="#kontaktai">Kontaktai</a></li>
+    </ul>
+    <div class="header-actions">
+      <a href="tel:+37064360187" class="header-btn" title="Skambinti">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" viewBox="0 0 24 24">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22 2 13.93 2 4.5A1 1 0 013 3.5h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/>
+        </svg>
+      </a>
+      <a href="mailto:gvidismedia@gmail.com" class="header-btn" title="Rašyti el. paštu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" viewBox="0 0 24 24">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20v-9.99l8 6.99 8-6.99V20H4z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
 
-.section-bg {
-  background: linear-gradient(120deg, #181b2c 0%, #3a2352 100%);
-}
+  <section class="hero">
+    <video autoplay loop muted playsinline class="hero-video">
+      <source src="tavovideo.mp4" type="video/mp4">
+      Jūsų naršyklė nepalaiko video.
+    </video>
+    <h1 data-aos="fade-up">Videografo Paslaugos<br>Jums ir Jūsų verslui.</h1>
+  </section>
 
-/* Navigacija */
-.navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.3em 2em;
-  background: #000;
-  color: white;
-}
+  <!-- PASLAUGOS -->
+  <section id="paslaugos" class="services section-bg" data-aos="fade-up">
+    <h2>Paslaugos</h2>
+    <div class="service-list-cards">
+      <div class="service-card">
+        <div class="service-icon">🎥</div>
+        <h3>Renginių filmavimas</h3>
+        <p>Kad svarbiausios akimirkos liktų gyvos ne tik atmintyje. Vestuvės, koncertai, renginiai – įamžinsiu tai, kas tau svarbiausia.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✏️</div>
+        <h3>Video tavo prekės ženklui</h3>
+        <p>Padėsiu perteikti, kuo tavo verslas išsiskiria. Profesionalūs video stiprina įvaizdį, didina pasitikėjimą ir padeda pritraukti klientų.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Reels’ai ir socialinių tinklų turinys</h3>
+        <p>Greiti, dinamiški, įtraukiantys – tokie video, kurie išsiskiria naujienų sraute ir pritraukia sekėjus.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎬</div>
+        <h3>Asmeniniai video projektai</h3>
+        <p>Turi idėją? Padėsiu ją įgyvendinti – nuo koncepcijos iki galutinio montažo. Kūrybiškai, profesionaliai, išskirtinai.</p>
+      </div>
+    </div>
 
-.logo {
-  height: 72px;
-  margin-right: 2em;
-}
+    <div class="service-extra">
+      <h3>Ieškai operatoriaus ar video kūrėjo?</h3>
+      <p>Parašyk man – aptarsime tavo projektą ir sukursime video, kuris kalbės už tave.</p>
+    </div>
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 2em;
-  justify-content: center;
-  flex: 1;
-  padding: 0;
-  margin: 0;
-}
+    <section class="subscription-offer" data-aos="fade-up">
+      <div class="subscription-icon">
+        <span>🎬</span>
+      </div>
+      <h2>Pirmas video – <span class="highlight">nemokamai</span>!</h2>
+      <p class="subscription-lead">
+        Užsisakyk mėnesinę videoturinio prenumeratą ir gauk <b>pirmąjį video iki 20 sek. visiškai nemokamai</b>! Tai puiki proga įsitikinti mano kokybe be jokios rizikos.
+      </p>
+      <ul>
+        <li>✅ <span class="white-text">Reguliarus, profesionalus video turinys tavo verslui</span></li>
+        <li>✅ <span class="white-text">Tinka „Reels“, reklamoms, interviu, užkulisiniams video</span></li>
+        <li>✅ <span class="white-text">Kiekvieną mėnesį – naujas video tavo auditorijai</span></li>
+        <li>✅ <span class="white-text">Pirmas video – iki 20 sek. trukmės</span></li>
+      </ul>
+      <div class="subscription-cta">
+        <strong>Parašyk man ir aptarsime, kaip tai galėtų veikti tavo atveju!</strong>
+      </div>
+    </section>
+  </section>
 
-.navbar a {
-  text-decoration: none;
-  color: white;
-  font-style: normal;
-  font-size: 1.5em;
-  transition: color 0.2s;
-}
+  <!-- VIDEO GALERIJA -->
+  <section id="darbai" class="video-gallery section-bg" data-aos="fade-up">
+    <iframe src="https://www.youtube.com/embed/hzfbjd1J_vk" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/RxdXpxLyvMg" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/A7aJb-j0Jxw" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/-jNB0f0ET1E" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/96LodvzjMn0" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/RThiGI9_Inw" frameborder="0" allowfullscreen></iframe>
+  </section>
 
-.navbar a:hover {
-  color: #ffd600;
-}
+  <!-- KONTAKTAI -->
+  <section id="kontaktai" class="contact section-bg" data-aos="fade-up">
+    <h2>Susisiekime</h2>
+    <form action="https://formsubmit.co/gvidismedia@gmail.com" method="POST">
+      <input type="hidden" name="_redirect" value="https://gvidismedia.lt/">
+      <label for="name">Vardas:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">El. paštas:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Žinutė:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit">Siųsti</button>
+    </form>
+    <div class="contact-info">
+      <p>El. paštas: <a href="mailto:gvidismedia@gmail.com">gvidismedia@gmail.com</a></p>
+      <p>Tel.: <a href="tel:+37064360187">+370 643 60187</a></p>
+    </div>
+  </section>
 
-.header-actions {
-  display: flex;
-  gap: 1em;
-  align-items: center;
-  margin-left: 1.5em;
-}
+  <footer class="section-bg">
+    <p>© 2025 Gvidismedia. Visos teisės saugomos.</p>
+    <p>
+      <a href="privatumo-politika.html" target="_blank" rel="noopener noreferrer" style="color:#ffd600;text-decoration:underline;">
+        Privatumo politika
+      </a>
+      &nbsp;|&nbsp;
+      <a href="slapuku-naudojimu-taisykles.html" target="_blank" rel="noopener noreferrer" style="color:#ffd600;text-decoration:underline;">
+        Slapukų naudojimo taisyklės
+      </a>
+      &nbsp;|&nbsp;
+      <a href="DUK.html" target="_blank" rel="noopener noreferrer" style="color:#ffd600;text-decoration:underline;">
+        D.U.K
+      </a>
+    </p>
+  </footer>
 
-.header-btn {
-  background: #000;
-  border-radius: 50%;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.15);
-  text-decoration: none;
-  border: none;
-  outline: none;
-}
-
-.header-btn svg {
-  fill: #fff;
-  transition: fill 0.2s;
-}
-
-.header-btn:hover {
-  background: #fff;
-}
-
-.header-btn:hover svg {
-  fill: #000;
-}
-
-/* Hero sekcija */
-.hero {
-  position: relative;
-  color: white;
-  padding: 6em 2em;
-  text-align: right;
-  font-size: 2em;
-  font-weight: bold;
-  overflow: hidden;
-  min-height: 350px;
-  background: #181b2c;
-  display: block;
-}
-
-.hero-video {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 1;
-}
-
-.hero h1 {
-  position: relative;
-  z-index: 1;
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.3);
-}
-
-/* Paslaugos */
-.services {
-  padding: 4em 1em 3em 1em;
-  text-align: center;
-}
-
-.services h2 {
-  color: #ffd600;
-  text-align: center;
-  font-size: 2.2em;
-  font-weight: 800;
-  margin-bottom: 2em;
-  letter-spacing: 1px;
-}
-
-.service-list-cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 2em;
-  max-width: 1400px;
-  margin: 0 auto 2em auto;
-  flex-wrap: wrap;
-}
-
-.service-card {
-  background: #23243a;
-  border-radius: 24px;
-  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
-  padding: 2em 1.5em 1.5em 1.5em;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  min-width: 220px;
-  max-width: 260px;
-  min-height: 320px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  text-align: left;
-}
-
-.service-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.22);
-}
-
-.service-icon {
-  font-size: 2.5em;
-  margin-bottom: 1em;
-  color: #ffd600;
-  filter: drop-shadow(0 2px 8px #0003);
-}
-
-.service-card h3 {
-  font-size: 1.15em;
-  font-weight: 800;
-  margin-bottom: 0.7em;
-  color: #fff;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.service-card p {
-  font-size: 1.05em;
-  color: #e0e0e0;
-  font-weight: 400;
-  margin: 0;
-}
-
-.service-extra {
-  margin: 2em auto 2em auto;
-  max-width: 600px;
-  color: #fff;
-  background: none;
-  text-align: center;
-}
-
-.service-extra h3 {
-  font-size: 1.3em;
-  font-weight: 800;
-  margin-bottom: 0.5em;
-  color: #ffd600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.service-extra p {
-  font-size: 1.08em;
-  color: #fff;
-  margin: 0;
-}
-
-/* Prenumeratos pasiūlymas */
-.subscription-offer {
-  background: linear-gradient(120deg, #23243a 0%, #3a2352 100%);
-  border-radius: 24px;
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
-  max-width: 520px;
-  margin: 3em auto 2em auto;
-  padding: 2.5em 2em 2em 2em;
-  text-align: center;
-  color: #fff;
-  border: 2px solid #ffd600;
-  position: relative;
-  overflow: hidden;
-}
-
-.subscription-icon {
-  font-size: 3em;
-  margin-bottom: 0.5em;
-  display: flex;
-  justify-content: center;
-}
-
-.subscription-offer h2 {
-  font-size: 2em;
-  font-weight: 900;
-  margin-bottom: 0.5em;
-  letter-spacing: 1px;
-  color: #ffd600;
-}
-
-.subscription-offer .highlight {
-  color: #ffffff;
-  background: #ffd600;
-  border-radius: 8px;
-  padding: 0 0.3em;
-  font-weight: 900;
-}
-
-.subscription-lead {
-  font-size: 1.15em;
-  color: #fff;
-  margin-bottom: 1.2em;
-  font-weight: 500;
-}
-
-.subscription-offer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.2em 0;
-}
-
-.subscription-offer ul li {
-  background: rgba(255,255,255,0.06);
-  margin: 0.5em 0;
-  padding: 0.7em 1em;
-  border-radius: 8px;
-  font-size: 1.08em;
-  color: #fff;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.subscription-offer ul li .white-text {
-  color: #fff;
-}
-
-.subscription-cta {
-  margin-top: 1.5em;
-  font-size: 1.13em;
-  color: #fff;
-  font-weight: 700;
-  background: rgba(0, 0, 0, 0.329);
-  padding: 1em 1.2em;
-  border-radius: 12px;
-  display: inline-block;
-}
-
-/* Video galerija */
-.video-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-  align-items: center;
-  margin: 2em auto;
-  max-width: 900px;
-  background: linear-gradient(120deg, #181b2c 0%, #3a2352 100%);
-  padding: 2em 1em;
-  border-radius: 24px;
-}
-
-.video-gallery iframe {
-  width: 100%;
-  height: 450px;
-  border-radius: 12px;
-  border: none;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
-  background: #23243a;
-}
-
-/* Kontaktai */
-.contact {
-  padding: 3em 1em;
-  border-radius: 16px;
-  max-width: 500px;
-  margin: 3em auto 2em auto;
-  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
-  text-align: center;
-  background: linear-gradient(120deg, #181b2c 0%, #3a2352 100%);
-  border: 2px solid #23243a;
-}
-
-.contact h2 {
-  font-size: 2em;
-  margin-bottom: 1em;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #fff;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  margin-bottom: 2em;
-}
-
-.contact label {
-  text-align: left;
-  font-weight: 600;
-  margin-bottom: 0.2em;
-  color: #fff;
-}
-
-.contact input,
-.contact textarea {
-  padding: 0.7em 1em;
-  border: 1px solid #ffd600;
-  border-radius: 8px;
-  font-size: 1em;
-  font-family: 'Inter', sans-serif;
-  background: #23243a;
-  color: #fff;
-  transition: border 0.2s;
-}
-
-.contact input:focus,
-.contact textarea:focus {
-  border: 1.5px solid #fff;
-  outline: none;
-}
-
-.contact button {
-  background: #fff;
-  color: #23243a;
-  border: none;
-  border-radius: 8px;
-  padding: 0.8em 0;
-  font-size: 1.1em;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-
-.contact button:hover {
-  background: #ffd600;
-  color: #23243a;
-}
-
-.contact-info {
-  margin-top: 1.5em;
-  font-size: 1.1em;
-  color: #fff;
-}
-
-.contact-info a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s;
-}
-
-.contact-info a:hover {
-  color: #ffd600;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1em;
-  background: linear-gradient(120deg, #181b2c 0%, #3a2352 100%);
-  color: #ffd600;
-  border-top: 2px solid #23243a;
-}
-
-/* ----------- DUK (FAQ) ----------- */
-.faq-section {
-  max-width: 700px;
-  margin: 3em auto 2em auto;
-  padding: 2em 1em;
-  border-radius: 16px;
-  background: var(--section-bg, #23243a);
-}
-
-.faq-item {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-bottom: 14px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  color: #23243a;
-  overflow: hidden;
-}
-
-.faq-question {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 16px 44px 16px 18px;
-  background: transparent;
-  font-weight: 700;
-  cursor: pointer;
-  margin: 0;
-  position: relative;
-  color: #23243a;
-  font-size: 1.08em;
-  transition: background 0.2s, color 0.2s;
-  outline: none;
-  border: none;
-  text-align: left;
-  border-radius: 8px 8px 0 0;
-  min-height: 48px;
-}
-
-.faq-question::after {
-  content: '+';
-  position: absolute;
-  right: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.3em;
-  color: #ffd600;
-  transition: transform 0.2s;
-}
-
-.faq-item.open .faq-question {
-  color: #ffd600;
-  background: #23243a;
-}
-
-.faq-item.open .faq-question::after {
-  content: '-';
-  transform: translateY(-50%) rotate(180deg);
-}
-
-.faq-answer {
-  display: none;
-  margin: 0;
-  padding: 0 18px 16px 18px;
-  color: #444;
-  animation: fadeIn 0.3s;
-  font-size: 1em;
-  line-height: 1.6;
-}
-
-.faq-item.open .faq-answer {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* ----------- Responsive ----------- */
-@media (max-width: 700px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 1em;
-  }
-  .logo {
-    display: block;
-    margin: 0 auto 1em auto;
-    float: none;
-  }
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
-    margin-bottom: 1em;
-    width: 100%;
-    padding: 0;
-    text-align: center;
-  }
-  .header-actions {
-    margin-left: 0;
-    gap: 0.7em;
-  }
-  .services {
-    padding: 2em 0.5em 1em 0.5em;
-  }
-  .service-list-cards {
-    flex-direction: column;
-    gap: 1em;
-    align-items: center;
-  }
-  .service-card {
-    max-width: 85vw;           /* sumažintas plotis */
-    min-width: 0;
-    width: 85vw;               /* sumažintas plotis */
-    margin: 0 auto;
-    padding: 1em 0.7em 0.7em 0.7em;
-    min-height: 110px;         /* dar mažesnė aukštis */
-    border-radius: 16px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;       /* centras viskam kortelėje */
-    text-align: center;        /* tekstas centre */
-  }
-  .service-icon {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  .service-card h3 {
-    font-size: 1em;
-    margin-bottom: 0.4em;
-    text-align: center;
-    width: 100%;
-  }
-  .service-card p {
-    font-size: 0.98em;
-    text-align: center;
-    width: 100%;
-  }
-  .contact {
-    padding: 1.5em 0.5em;
-    border-radius: 8px;
-    margin: 1.5em 0 1em 0;
-  }
-  .subscription-offer {
-    padding: 1.5em 0.5em 1em 0.5em;
-    border-radius: 12px;
-  }
-  .video-gallery {
-    padding: 1em 0.2em;
-    border-radius: 16px;
-  }
-  .faq-section {
-    padding: 1em 0.2em;
-    margin: 1em 0;
-    border-radius: 0;
-  }
-  .faq-question {
-    font-size: 1em;
-    padding: 14px 38px 14px 12px;
-    min-height: 44px;
-  }
-  .faq-answer {
-    padding: 0 12px 14px 12px;
-    font-size: 0.98em;
-  }
-  .hero {
-    padding: 2.2em 0.7em 1.5em 0.7em;
-    font-size: 1.05em;
-    text-align: center;
-    min-height: 120px;
-    word-break: break-word;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .hero h1 {
-    font-size: 1.15em;
-    line-height: 1.25;
-    text-align: center;
-    margin: 0;
-    word-break: break-word;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media (max-width: 600px) {
-  .hero {
-    padding: 0;
-    min-height: 320px;
-    height: 55vw;
-    max-height: 60vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-align: center;
-    font-size: 1em;
-    background: #181b2c;
-    overflow: hidden;
-  }
-  .hero-video {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 60vw;
-    min-height: 220px;
-    max-height: 65vw;
-    object-fit: cover;
-    z-index: 0;
-    border-radius: 0;
-  }
-  .hero h1 {
-    position: relative;
-    z-index: 1;
-    font-size: 2em;
-    line-height: 1.1;
-    font-weight: 800;
-    color: #fff;
-    text-align: center;
-    margin: 0;
-    padding: 0 10px;
-    text-shadow: 0 2px 16px rgba(0,0,0,0.5);
-    background: none;
-    border-radius: 0;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
