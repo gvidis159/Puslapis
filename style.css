@@ -513,18 +513,18 @@ footer {
     align-items: center;
   }
   .service-card {
-    max-width: 85vw;           /* sumažintas plotis */
+    max-width: 85vw;
     min-width: 0;
-    width: 85vw;               /* sumažintas plotis */
+    width: 85vw;
     margin: 0 auto;
     padding: 1em 0.7em 0.7em 0.7em;
-    min-height: 110px;         /* dar mažesnė aukštis */
+    min-height: 110px;
     border-radius: 16px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;       /* centras viskam kortelėje */
-    text-align: center;        /* tekstas centre */
+    align-items: center;
+    text-align: center;
   }
   .service-icon {
     font-size: 2em;
@@ -572,36 +572,10 @@ footer {
     font-size: 0.98em;
   }
   .hero {
-    padding: 2.2em 0.7em 1.5em 0.7em;
-    font-size: 1.05em;
-    text-align: center;
-    min-height: 120px;
-    word-break: break-word;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .hero h1 {
-    font-size: 1.15em;
-    line-height: 1.25;
-    text-align: center;
-    margin: 0;
-    word-break: break-word;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media (max-width: 600px) {
-  .hero {
     padding: 0;
-    min-height: 320px;
-    height: 55vw;
-    max-height: 60vw;
+    min-height: 400px;
+    height: 90vh;
+    max-height: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -616,16 +590,26 @@ footer {
     position: absolute;
     top: 0; left: 0;
     width: 100vw;
-    height: 60vw;
-    min-height: 220px;
-    max-height: 65vw;
+    height: 90vh;
+    min-height: 400px;
+    max-height: none;
     object-fit: cover;
     z-index: 0;
     border-radius: 0;
+    opacity: 0.92; /* šiek tiek patamsinta */
+    transition: opacity 0.3s;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(0,0,0,0.18));
+    z-index: 1;
+    pointer-events: none;
   }
   .hero h1 {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     font-size: 2em;
     line-height: 1.1;
     font-weight: 800;
@@ -641,17 +625,5 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  /* Tik telefone: hero aukštis ir gradientas */
-  .hero {
-    height: 90vh;
-    min-height: 400px;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6));
-    z-index: 0;
   }
 }
