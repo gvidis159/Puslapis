@@ -8,7 +8,6 @@
   <meta property="og:description" content="Profesionalios videografo paslaugos jūsų verslui ir renginiams.">
   <meta property="og:image" content="https://gvidismedia.lt/og-image.jpg">
   <meta property="og:url" content="https://gvidismedia.lt/">
-<!-- ...existing code... -->
   <title>Videografo Paslaugos</title>
   <link rel="stylesheet" href="style.css">
   <!-- Montserrat šriftas -->
@@ -45,18 +44,11 @@
     </div>
   </header>
 
- <section class="hero">
-  <video id="hero-video" autoplay loop muted playsinline preload="auto" class="hero-video">
-  <source src="tavovideo.mp4" type="video/mp4">
-  Jūsų naršyklė nepalaiko video.
-</video>
-<script>
-  const vid = document.getElementById('hero-video');
-  vid.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-  });
-</script>
+  <section class="hero">
+    <video autoplay loop muted playsinline class="hero-video">
+      <source src="tavovideo.mp4" type="video/mp4">
+      Jūsų naršyklė nepalaiko video.
+    </video>
     <h1 data-aos="fade-up">Videografo Paslaugos<br>Jums ir Jūsų verslui.</h1>
   </section>
   
@@ -113,6 +105,13 @@
 
   <!-- VIDEO GALERIJA -->
   <section id="darbai" class="video-gallery section-bg" data-aos="fade-up">
+    <!-- REELS BLOKAS -->
+    <div class="reels-gallery">
+      <iframe class="reel" src="https://www.youtube.com/embed/shorts/3tQvQwQwQwQ" frameborder="0" allowfullscreen></iframe>
+      <iframe class="reel" src="https://www.youtube.com/embed/shorts/4tQvQwQwQwQ" frameborder="0" allowfullscreen></iframe>
+      <!-- Pridėk daugiau reels jei reikia -->
+    </div>
+    <!-- PAGRINDINIAI VIDEO -->
     <iframe src="https://www.youtube.com/embed/hzfbjd1J_vk" frameborder="0" allowfullscreen></iframe>
     <iframe src="https://www.youtube.com/embed/8ylGMJBaPE8" frameborder="0" allowfullscreen></iframe>
     <iframe src="https://www.youtube.com/embed/A7aJb-j0Jxw" frameborder="0" allowfullscreen></iframe>
